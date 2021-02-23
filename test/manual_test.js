@@ -10,7 +10,7 @@ async function main() {
   const handler = new CarnetLoginHandler(page, console);
 
   // Try to login with your username and password.
-  // The login will take ~10 seconds... 
+  // The login will take ~10 seconds...
   const client = await handler.createClient({
     email: process.env.EMAIL,
     password: process.env.PASS
@@ -25,7 +25,7 @@ async function main() {
   console.log('car details:', details);
 
   // Start the climate heater.
-  await client.triggerClimatisation(true);
+  //await client.triggerClimatisation(true);
 
   await client.getEmanager();
   await client.getLatestReport();

@@ -65,8 +65,8 @@ export default class CarnetLoginHandler {
     logger.debug('-- login() - typed in email, click next');
     await page.click('#next-btn');
 
-    await page.waitForSelector('#input_password_for_login');
-    await page.type('#input_password_for_login', credentials.password);
+    await page.waitForSelector('#password');
+    await page.type('#password', credentials.password);
 
     logger.debug('-- login() - typed in password, click next');
     await page.click('#next-btn');
